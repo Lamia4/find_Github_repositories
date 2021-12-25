@@ -1,12 +1,6 @@
 class GithubUserWidget
 {
-    /**
-     * @constructor
-     * @param { object } config
-     * @param { string } config.container
-     * @param { string } config.apiUrl
-     * @param { string } config.endpoint
-     */
+    
     constructor(config = {})
     {
         this.config = config;
@@ -73,8 +67,6 @@ class GithubUserWidget
     getRepositories(username, callback)
     {
         const url = (this.apiUrl + this.endpoint).replace(":username", username);
-
-        console.log(url); // https://api.github.com/users/FRickReich/repos
 
         fetch(url)
         .then(response => response.json())
