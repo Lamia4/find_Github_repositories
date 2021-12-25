@@ -21,7 +21,7 @@ class GithubUserWidget
     {
         this.elements.container = document.querySelector(this.config.container);
         this.elements.container.innerHTML = `
-            <form class="form-inline widget-form">
+            <form class="form-inline widget-form" >
                 <input
                     type="text"
                     class="form-control mb-2 widget-input"
@@ -46,12 +46,12 @@ class GithubUserWidget
                 console.log(repositories);
 
                 this.elements.list.innerHTML = `
-                    <div class="list-group">
+                    <div class="list-group" >
                     ${
                         repositories.map(repository =>
                         {
                             return `
-                                <a
+                                <a style="background: rosybrown; color: black"
                                     href="${ repository.html_url }"
                                     target="_blank"
                                     class="list-group-item list-group-item-action"
